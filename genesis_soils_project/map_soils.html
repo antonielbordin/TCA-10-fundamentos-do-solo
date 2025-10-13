@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f78cfe02838ad11ead172764335ca082 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f78cfe02838ad11ead172764335ca082" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f78cfe02838ad11ead172764335ca082 = L.map(
+                "map_f78cfe02838ad11ead172764335ca082",
+                {
+                    center: [-24.5, -53.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c91d861ec6b54666c447e3551db20084 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c91d861ec6b54666c447e3551db20084.addTo(map_f78cfe02838ad11ead172764335ca082);
+        
+    
+            var marker_5d094366874e38f94c53e3ae25dc104b = L.marker(
+                [-24.55, -53.5],
+                {
+}
+            ).addTo(map_f78cfe02838ad11ead172764335ca082);
+        
+    
+            var icon_e93372819ef39375a21ca98456df059d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_757090bef2f003c49ed52de85e4167d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f19621c56df7e73f0657e4f89f35479b = $(`<div id="html_f19621c56df7e73f0657e4f89f35479b" style="width: 100.0%; height: 100.0%;"><b>Latossolo Vermelho</b><br>Origem: Rochas basálticas (vulcânicas)</div>`)[0];
+                popup_757090bef2f003c49ed52de85e4167d7.setContent(html_f19621c56df7e73f0657e4f89f35479b);
+            
+        
+
+        marker_5d094366874e38f94c53e3ae25dc104b.bindPopup(popup_757090bef2f003c49ed52de85e4167d7)
+        ;
+
+        
+    
+    
+                marker_5d094366874e38f94c53e3ae25dc104b.setIcon(icon_e93372819ef39375a21ca98456df059d);
+            
+    
+            var marker_bf865b89fe8d8080b1b822c41f244192 = L.marker(
+                [-24.75, -52.9],
+                {
+}
+            ).addTo(map_f78cfe02838ad11ead172764335ca082);
+        
+    
+            var icon_93b0fcd5673e9cfef4df51cf138db2ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49f6765c334b5a2b5cc368cd6b6a5f7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c06d0b2b5b812d4c6c16121e67ce5579 = $(`<div id="html_c06d0b2b5b812d4c6c16121e67ce5579" style="width: 100.0%; height: 100.0%;"><b>Argissolo Vermelho-Amarelo</b><br>Origem: Arenito Caiuá</div>`)[0];
+                popup_49f6765c334b5a2b5cc368cd6b6a5f7b.setContent(html_c06d0b2b5b812d4c6c16121e67ce5579);
+            
+        
+
+        marker_bf865b89fe8d8080b1b822c41f244192.bindPopup(popup_49f6765c334b5a2b5cc368cd6b6a5f7b)
+        ;
+
+        
+    
+    
+                marker_bf865b89fe8d8080b1b822c41f244192.setIcon(icon_93b0fcd5673e9cfef4df51cf138db2ce);
+            
+    
+            var marker_cada1f434c498344559c829d32064e11 = L.marker(
+                [-25.1, -54.2],
+                {
+}
+            ).addTo(map_f78cfe02838ad11ead172764335ca082);
+        
+    
+            var icon_9ad56bf5355d559b5dd8af1ac58c273e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6f4c705817702325e16db8e62155686 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_271724e41384b79a4ff343a40a440288 = $(`<div id="html_271724e41384b79a4ff343a40a440288" style="width: 100.0%; height: 100.0%;"><b>Neossolo Quartzarênico</b><br>Origem: Sedimentos arenosos recentes</div>`)[0];
+                popup_b6f4c705817702325e16db8e62155686.setContent(html_271724e41384b79a4ff343a40a440288);
+            
+        
+
+        marker_cada1f434c498344559c829d32064e11.bindPopup(popup_b6f4c705817702325e16db8e62155686)
+        ;
+
+        
+    
+    
+                marker_cada1f434c498344559c829d32064e11.setIcon(icon_9ad56bf5355d559b5dd8af1ac58c273e);
+            
+</script>
+</html>

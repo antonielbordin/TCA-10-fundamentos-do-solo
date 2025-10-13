@@ -84,25 +84,6 @@ PyVis (Python)
 
 Permite criar mapas interativos (grafos) em HTML.
 
-Dá pra abrir no navegador e apresentar direto na aula.
-
-📍 Exemplo de nó:
-
-```python
-from pyvis.network import Network
-net = Network(height="700px", width="100%", bgcolor="#fff")
-
-net.add_node("Gênese do Solo", title="Processo de formação do solo a partir da rocha mãe")
-net.add_node("Clima", title="Temperatura e chuva influenciam o intemperismo")
-net.add_node("Rocha Mãe", title="Origem mineral do solo")
-net.add_node("Tempo", title="Idade do solo")
-net.add_edge("Gênese do Solo", "Clima")
-net.add_edge("Gênese do Solo", "Rocha Mãe")
-net.add_edge("Gênese do Solo", "Tempo")
-
-net.show("genesesolo.html")
-```
-
 🔸 Se quiser um mapa com imagens reais e geolocalização:
 
 Folium (Python + Leaflet) → mapa real do Brasil mostrando solos formados por diferentes rochas.
