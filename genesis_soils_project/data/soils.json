@@ -1,0 +1,72 @@
+[
+  {
+    "id": "s_cascavel",
+    "name": "Latossolo Vermelho - Cascavel",
+    "coords": [-24.9576, -53.4551],
+    "img": "images/latossolo_vermelho.jpg",
+    "description": "Solo profundo e bem drenado, desenvolvido sobre rochas basálticas da Formação Serra Geral. Rico em óxidos de ferro, apresenta coloração avermelhada característica."
+  },
+  {
+    "id": "s_toledo",
+    "name": "Argissolo Vermelho - Toledo",
+    "coords": [-24.7246, -53.7431],
+    "img": "images/argissolo_toledo.jpg",
+    "description": "Solo de origem basáltica, com acúmulo de argila no horizonte B. Boa fertilidade natural e relevo suave ondulado."
+  },
+  {
+    "id": "s_palotina",
+    "name": "Argissolo/Neossolo - Palotina",
+    "coords": [-24.3233, -53.8711],
+    "img": "images/argissolo_palotina.jpg",
+    "description": "Transição entre basaltos e depósitos arenosos do Arenito Caiuá. Solos menos profundos e com textura arenosa predominante."
+  },
+  {
+    "id": "s_rondon",
+    "name": "Solos Coluviais - Marechal C. Rondon",
+    "coords": [-24.5486, -54.0236],
+    "img": "images/coluvial_rondon.jpg",
+    "description": "Depósitos coluviais mistos, formados pela acumulação de materiais transportados por gravidade. Textura variável e boa drenagem."
+  },
+  {
+    "id": "s_guaira",
+    "name": "Neossolo Quartzarênico - Guaíra",
+    "coords": [-24.0906, -54.2786],
+    "img": "images/neossolo_guaira.jpg",
+    "description": "Solos jovens e arenosos formados sobre depósitos aluviais recentes, comuns em margens do Rio Paraná."
+  },
+  {
+    "id": "s_foz",
+    "name": "Solos Aluviais - Foz do Iguaçu",
+    "coords": [-25.5163, -54.5851],
+    "img": "images/alluvial_foz.jpg",
+    "description": "Solos jovens formados por sedimentos recentes das planícies fluviais do Iguaçu e Paraná. Alta variabilidade e baixa maturidade pedogenética."
+  },
+  {
+    "id": "s_santahelena",
+    "name": "Planossolo - Santa Helena",
+    "coords": [-24.8689, -54.5122],
+    "img": "images/planossolo_santahelena.jpg",
+    "description": "Solo com acúmulo de argila e drenagem deficiente, típico de áreas planas e mal drenadas próximas a várzeas."
+  },
+  {
+    "id": "s_medianeira",
+    "name": "Latossolo Vermelho - Medianeira",
+    "coords": [-25.3245, -54.0786],
+    "img": "images/latossolo_medianeira.jpg",
+    "description": "Solo profundo de origem basáltica, com boa estrutura e drenagem. Muito utilizado para agricultura intensiva."
+  },
+  {
+    "id": "s_assis",
+    "name": "Neossolo Quartzarênico - Assis Chateaubriand",
+    "coords": [-24.2558, -53.9505],
+    "img": "images/neossolo_assis.jpg",
+    "description": "Solos arenosos e pouco desenvolvidos, de baixa fertilidade natural, formados a partir de depósitos recentes."
+  },
+  {
+    "id": "s_palotina2",
+    "name": "Arenito Caiuá - Palotina Sudoeste",
+    "coords": [-24.3700, -53.9500],
+    "img": "images/caiua_palotina.jpg",
+    "description": "Solo formado a partir do Arenito Caiuá, material sedimentar altamente arenoso, com baixa capacidade de retenção de nutrientes."
+  }
+]

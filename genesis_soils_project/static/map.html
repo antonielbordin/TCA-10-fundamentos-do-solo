@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fe7352a21fff12f26b91191512aa41e4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fe7352a21fff12f26b91191512aa41e4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fe7352a21fff12f26b91191512aa41e4 = L.map(
+                "map_fe7352a21fff12f26b91191512aa41e4",
+                {
+                    center: [-24.69802, -54.04479],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": [
+[
+-90,
+-180,
+],
+[
+90,
+180,
+],
+],
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0aa55ac7d81a2712759dda7861aca92c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 6,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0aa55ac7d81a2712759dda7861aca92c.addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_94dce8366e0d61265cdd5a6ae7ab198b = L.polygon(
+                [[-24.8689, -54.5122], [-25.3245, -54.0786], [-25.5163, -54.5851]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_c781149ddc0d3bb95d54f9ccdda852fc = L.polygon(
+                [[-24.5486, -54.0236], [-24.8689, -54.5122], [-24.0906, -54.2786]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_8d848720ff8cb1eafe50c0aced9db98a = L.polygon(
+                [[-24.5486, -54.0236], [-25.3245, -54.0786], [-24.8689, -54.5122]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_350b733672715a6eb55a5f7da2f255bb = L.polygon(
+                [[-24.7246, -53.7431], [-24.3233, -53.8711], [-24.9576, -53.4551]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_9da1e2ef56b90677f7c47ae97b42c2b3 = L.polygon(
+                [[-25.3245, -54.0786], [-24.7246, -53.7431], [-24.9576, -53.4551]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_3e00a6112c61b1d3d810ea4cab5df5f6 = L.polygon(
+                [[-24.5486, -54.0236], [-24.7246, -53.7431], [-25.3245, -54.0786]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_453ec5f8168cfab8be8ff455342de9ba = L.polygon(
+                [[-24.37, -53.95], [-24.2558, -53.9505], [-24.3233, -53.8711]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_e49fcbcfff3890abc52a9fc3bb02828a = L.polygon(
+                [[-24.37, -53.95], [-24.7246, -53.7431], [-24.5486, -54.0236]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_72a25643436176730770f21b9814f31f = L.polygon(
+                [[-24.7246, -53.7431], [-24.37, -53.95], [-24.3233, -53.8711]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_0c25bb88a2b4ffa00834bac411b14cf5 = L.polygon(
+                [[-24.37, -53.95], [-24.5486, -54.0236], [-24.0906, -54.2786]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var polygon_c15c9d4bd021a84c5dde82ba2c5ec004 = L.polygon(
+                [[-24.2558, -53.9505], [-24.37, -53.95], [-24.0906, -54.2786]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var circle_d6d8c14c7b841bd5e6cb8ecdb4e975d1 = L.circle(
+                [-24.9576, -53.4551],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_54e2620a1d3c885a2926ac8a18f7c118 = L.marker(
+                [-24.9576, -53.4551],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_16a97ccd88c8431292610334af2f963a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9303c9d140489e4f102cfe48f39fa681 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_79ca3c690f3f148230b086e0c0315d08 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5MYXRvc3NvbG8gVmVybWVsaG8gLSBDYXNjYXZlbDwvaDQ+CiAgICAgIDxkaXYgc3R5bGU9J2Rpc3BsYXk6ZmxleDsgZ2FwOjEwcHg7Jz4KICAgICAgICA8ZGl2IHN0eWxlPSdmbGV4OjAgMCA0NSU7Jz4KICAgICAgICAgIDxpbWcgc3JjPSdpbWFnZXMvbGF0b3Nzb2xvX3Zlcm1lbGhvLmpwZycgYWx0PSdMYXRvc3NvbG8gVmVybWVsaG8gLSBDYXNjYXZlbCcgc3R5bGU9J3dpZHRoOjEwMCU7IGJvcmRlci1yYWRpdXM6NnB4OycvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MTsgZm9udC1zaXplOjEzcHg7IHRleHQtYWxpZ246anVzdGlmeTsgcGFkZGluZzogNXB4OyBiYWNrZ3JvdW5kOm1hZ2VudGEnPgogICAgICAgICAgU29sbyBwcm9mdW5kbyBlIGJlbSBkcmVuYWRvLCBkZXNlbnZvbHZpZG8gc29icmUgcm9jaGFzIGJhc8OhbHRpY2FzIGRhIEZvcm1hw6fDo28gU2VycmEgR2VyYWwuIFJpY28gZW0gw7N4aWRvcyBkZSBmZXJybywgYXByZXNlbnRhIGNvbG9yYcOnw6NvIGF2ZXJtZWxoYWRhIGNhcmFjdGVyw61zdGljYS4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIA==" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_9303c9d140489e4f102cfe48f39fa681.setContent(i_frame_79ca3c690f3f148230b086e0c0315d08);
+            
+        
+
+        marker_54e2620a1d3c885a2926ac8a18f7c118.bindPopup(popup_9303c9d140489e4f102cfe48f39fa681)
+        ;
+
+        
+    
+    
+            marker_54e2620a1d3c885a2926ac8a18f7c118.bindTooltip(
+                `<div>
+                     Latossolo Vermelho - Cascavel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54e2620a1d3c885a2926ac8a18f7c118.setIcon(icon_16a97ccd88c8431292610334af2f963a);
+            
+    
+            var circle_cc79b2afb658a3af82b42ed6f086eadf = L.circle(
+                [-24.7246, -53.7431],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_0072d65435e3c22e411c84526751f0ec = L.marker(
+                [-24.7246, -53.7431],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_665233a86a8b08fee24e2ec5dec10ebc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b728a8a52157fb8c880c0773087f9fed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_d062782cedf1ebb260d433dd55189ad4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5Bcmdpc3NvbG8gVmVybWVsaG8gLSBUb2xlZG88L2g0PgogICAgICA8ZGl2IHN0eWxlPSdkaXNwbGF5OmZsZXg7IGdhcDoxMHB4Oyc+CiAgICAgICAgPGRpdiBzdHlsZT0nZmxleDowIDAgNDUlOyc+CiAgICAgICAgICA8aW1nIHNyYz0naW1hZ2VzL2FyZ2lzc29sb190b2xlZG8uanBnJyBhbHQ9J0FyZ2lzc29sbyBWZXJtZWxobyAtIFRvbGVkbycgc3R5bGU9J3dpZHRoOjEwMCU7IGJvcmRlci1yYWRpdXM6NnB4OycvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MTsgZm9udC1zaXplOjEzcHg7IHRleHQtYWxpZ246anVzdGlmeTsgcGFkZGluZzogNXB4OyBiYWNrZ3JvdW5kOm1hZ2VudGEnPgogICAgICAgICAgU29sbyBkZSBvcmlnZW0gYmFzw6FsdGljYSwgY29tIGFjw7ptdWxvIGRlIGFyZ2lsYSBubyBob3Jpem9udGUgQi4gQm9hIGZlcnRpbGlkYWRlIG5hdHVyYWwgZSByZWxldm8gc3VhdmUgb25kdWxhZG8uCiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA=" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_b728a8a52157fb8c880c0773087f9fed.setContent(i_frame_d062782cedf1ebb260d433dd55189ad4);
+            
+        
+
+        marker_0072d65435e3c22e411c84526751f0ec.bindPopup(popup_b728a8a52157fb8c880c0773087f9fed)
+        ;
+
+        
+    
+    
+            marker_0072d65435e3c22e411c84526751f0ec.bindTooltip(
+                `<div>
+                     Argissolo Vermelho - Toledo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0072d65435e3c22e411c84526751f0ec.setIcon(icon_665233a86a8b08fee24e2ec5dec10ebc);
+            
+    
+            var circle_f0313543716da5e078729eeae2cc8696 = L.circle(
+                [-24.3233, -53.8711],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_89dbdce456dbdc414f16de8e3a743f01 = L.marker(
+                [-24.3233, -53.8711],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_302c2443806a9f1d323ae0638f1d8732 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c025ce734ab55426f7a377fc54ee078a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_e9ccf1b5bfab9b5334ec53917c383652 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5Bcmdpc3NvbG8vTmVvc3NvbG8gLSBQYWxvdGluYTwvaDQ+CiAgICAgIDxkaXYgc3R5bGU9J2Rpc3BsYXk6ZmxleDsgZ2FwOjEwcHg7Jz4KICAgICAgICA8ZGl2IHN0eWxlPSdmbGV4OjAgMCA0NSU7Jz4KICAgICAgICAgIDxpbWcgc3JjPSdpbWFnZXMvYXJnaXNzb2xvX3BhbG90aW5hLmpwZycgYWx0PSdBcmdpc3NvbG8vTmVvc3NvbG8gLSBQYWxvdGluYScgc3R5bGU9J3dpZHRoOjEwMCU7IGJvcmRlci1yYWRpdXM6NnB4OycvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MTsgZm9udC1zaXplOjEzcHg7IHRleHQtYWxpZ246anVzdGlmeTsgcGFkZGluZzogNXB4OyBiYWNrZ3JvdW5kOm1hZ2VudGEnPgogICAgICAgICAgVHJhbnNpw6fDo28gZW50cmUgYmFzYWx0b3MgZSBkZXDDs3NpdG9zIGFyZW5vc29zIGRvIEFyZW5pdG8gQ2FpdcOhLiBTb2xvcyBtZW5vcyBwcm9mdW5kb3MgZSBjb20gdGV4dHVyYSBhcmVub3NhIHByZWRvbWluYW50ZS4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIA==" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_c025ce734ab55426f7a377fc54ee078a.setContent(i_frame_e9ccf1b5bfab9b5334ec53917c383652);
+            
+        
+
+        marker_89dbdce456dbdc414f16de8e3a743f01.bindPopup(popup_c025ce734ab55426f7a377fc54ee078a)
+        ;
+
+        
+    
+    
+            marker_89dbdce456dbdc414f16de8e3a743f01.bindTooltip(
+                `<div>
+                     Argissolo/Neossolo - Palotina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_89dbdce456dbdc414f16de8e3a743f01.setIcon(icon_302c2443806a9f1d323ae0638f1d8732);
+            
+    
+            var circle_93f1a0f4f1ba616c4a1e6a24e844e66c = L.circle(
+                [-24.5486, -54.0236],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_1779a70a5bb44750fff893018abf676c = L.marker(
+                [-24.5486, -54.0236],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_6a14268386f440feb9d037b65ccdcee2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b54383b37b35f46c596b3388793361f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_a437af2497d90f72d855594974c81ced = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5Tb2xvcyBDb2x1dmlhaXMgLSBNYXJlY2hhbCBDLiBSb25kb248L2g0PgogICAgICA8ZGl2IHN0eWxlPSdkaXNwbGF5OmZsZXg7IGdhcDoxMHB4Oyc+CiAgICAgICAgPGRpdiBzdHlsZT0nZmxleDowIDAgNDUlOyc+CiAgICAgICAgICA8aW1nIHNyYz0naW1hZ2VzL2NvbHV2aWFsX3JvbmRvbi5qcGcnIGFsdD0nU29sb3MgQ29sdXZpYWlzIC0gTWFyZWNoYWwgQy4gUm9uZG9uJyBzdHlsZT0nd2lkdGg6MTAwJTsgYm9yZGVyLXJhZGl1czo2cHg7Jy8+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBzdHlsZT0nZmxleDoxOyBmb250LXNpemU6MTNweDsgdGV4dC1hbGlnbjpqdXN0aWZ5OyBwYWRkaW5nOiA1cHg7IGJhY2tncm91bmQ6bWFnZW50YSc+CiAgICAgICAgICBEZXDDs3NpdG9zIGNvbHV2aWFpcyBtaXN0b3MsIGZvcm1hZG9zIHBlbGEgYWN1bXVsYcOnw6NvIGRlIG1hdGVyaWFpcyB0cmFuc3BvcnRhZG9zIHBvciBncmF2aWRhZGUuIFRleHR1cmEgdmFyacOhdmVsIGUgYm9hIGRyZW5hZ2VtLgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAg" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_b54383b37b35f46c596b3388793361f7.setContent(i_frame_a437af2497d90f72d855594974c81ced);
+            
+        
+
+        marker_1779a70a5bb44750fff893018abf676c.bindPopup(popup_b54383b37b35f46c596b3388793361f7)
+        ;
+
+        
+    
+    
+            marker_1779a70a5bb44750fff893018abf676c.bindTooltip(
+                `<div>
+                     Solos Coluviais - Marechal C. Rondon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1779a70a5bb44750fff893018abf676c.setIcon(icon_6a14268386f440feb9d037b65ccdcee2);
+            
+    
+            var circle_2d95afbf7f6454cf3b1b4302aef65dbe = L.circle(
+                [-24.0906, -54.2786],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_4d3e07cd35dde92022553464f792bd83 = L.marker(
+                [-24.0906, -54.2786],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_64b27f3afb5afecbc44c908205c99bfc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cae9a3e417e484e3e0984002067e0b09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_afebc35dac31cbdac86c2a4b54a7347d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5OZW9zc29sbyBRdWFydHphcsOqbmljbyAtIEd1YcOtcmE8L2g0PgogICAgICA8ZGl2IHN0eWxlPSdkaXNwbGF5OmZsZXg7IGdhcDoxMHB4Oyc+CiAgICAgICAgPGRpdiBzdHlsZT0nZmxleDowIDAgNDUlOyc+CiAgICAgICAgICA8aW1nIHNyYz0naW1hZ2VzL25lb3Nzb2xvX2d1YWlyYS5qcGcnIGFsdD0nTmVvc3NvbG8gUXVhcnR6YXLDqm5pY28gLSBHdWHDrXJhJyBzdHlsZT0nd2lkdGg6MTAwJTsgYm9yZGVyLXJhZGl1czo2cHg7Jy8+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBzdHlsZT0nZmxleDoxOyBmb250LXNpemU6MTNweDsgdGV4dC1hbGlnbjpqdXN0aWZ5OyBwYWRkaW5nOiA1cHg7IGJhY2tncm91bmQ6bWFnZW50YSc+CiAgICAgICAgICBTb2xvcyBqb3ZlbnMgZSBhcmVub3NvcyBmb3JtYWRvcyBzb2JyZSBkZXDDs3NpdG9zIGFsdXZpYWlzIHJlY2VudGVzLCBjb211bnMgZW0gbWFyZ2VucyBkbyBSaW8gUGFyYW7DoS4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIA==" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_cae9a3e417e484e3e0984002067e0b09.setContent(i_frame_afebc35dac31cbdac86c2a4b54a7347d);
+            
+        
+
+        marker_4d3e07cd35dde92022553464f792bd83.bindPopup(popup_cae9a3e417e484e3e0984002067e0b09)
+        ;
+
+        
+    
+    
+            marker_4d3e07cd35dde92022553464f792bd83.bindTooltip(
+                `<div>
+                     Neossolo Quartzarênico - Guaíra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d3e07cd35dde92022553464f792bd83.setIcon(icon_64b27f3afb5afecbc44c908205c99bfc);
+            
+    
+            var circle_b3ac61b467ea4c048a31edf838dc4638 = L.circle(
+                [-25.5163, -54.5851],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_89be720729eef5c8c0c9ad6fd2291a2a = L.marker(
+                [-25.5163, -54.5851],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_d26a4b585007cc20f18acc739b81da28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1fe57a2b36ca301e1271acf0b49b9406 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_4564d3bcaa06e1a564139aa1558255a9 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5Tb2xvcyBBbHV2aWFpcyAtIEZveiBkbyBJZ3Vhw6d1PC9oND4KICAgICAgPGRpdiBzdHlsZT0nZGlzcGxheTpmbGV4OyBnYXA6MTBweDsnPgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MCAwIDQ1JTsnPgogICAgICAgICAgPGltZyBzcmM9J2ltYWdlcy9hbGx1dmlhbF9mb3ouanBnJyBhbHQ9J1NvbG9zIEFsdXZpYWlzIC0gRm96IGRvIElndWHDp3UnIHN0eWxlPSd3aWR0aDoxMDAlOyBib3JkZXItcmFkaXVzOjZweDsnLz4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IHN0eWxlPSdmbGV4OjE7IGZvbnQtc2l6ZToxM3B4OyB0ZXh0LWFsaWduOmp1c3RpZnk7IHBhZGRpbmc6IDVweDsgYmFja2dyb3VuZDptYWdlbnRhJz4KICAgICAgICAgIFNvbG9zIGpvdmVucyBmb3JtYWRvcyBwb3Igc2VkaW1lbnRvcyByZWNlbnRlcyBkYXMgcGxhbsOtY2llcyBmbHV2aWFpcyBkbyBJZ3Vhw6d1IGUgUGFyYW7DoS4gQWx0YSB2YXJpYWJpbGlkYWRlIGUgYmFpeGEgbWF0dXJpZGFkZSBwZWRvZ2Vuw6l0aWNhLgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAg" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_1fe57a2b36ca301e1271acf0b49b9406.setContent(i_frame_4564d3bcaa06e1a564139aa1558255a9);
+            
+        
+
+        marker_89be720729eef5c8c0c9ad6fd2291a2a.bindPopup(popup_1fe57a2b36ca301e1271acf0b49b9406)
+        ;
+
+        
+    
+    
+            marker_89be720729eef5c8c0c9ad6fd2291a2a.bindTooltip(
+                `<div>
+                     Solos Aluviais - Foz do Iguaçu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_89be720729eef5c8c0c9ad6fd2291a2a.setIcon(icon_d26a4b585007cc20f18acc739b81da28);
+            
+    
+            var circle_3853854a35537b354cee4930936c29c5 = L.circle(
+                [-24.8689, -54.5122],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_b00b0b04e94f671e8d6691cef8fb7a13 = L.marker(
+                [-24.8689, -54.5122],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_c57c205ec4c6b66ff89931422743bdac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a24a4515b90eab5496aed8bc88ad43e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_f6fe72ee7362abb993ef3df8f4ef0f7d = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5QbGFub3Nzb2xvIC0gU2FudGEgSGVsZW5hPC9oND4KICAgICAgPGRpdiBzdHlsZT0nZGlzcGxheTpmbGV4OyBnYXA6MTBweDsnPgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MCAwIDQ1JTsnPgogICAgICAgICAgPGltZyBzcmM9J2ltYWdlcy9wbGFub3Nzb2xvX3NhbnRhaGVsZW5hLmpwZycgYWx0PSdQbGFub3Nzb2xvIC0gU2FudGEgSGVsZW5hJyBzdHlsZT0nd2lkdGg6MTAwJTsgYm9yZGVyLXJhZGl1czo2cHg7Jy8+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBzdHlsZT0nZmxleDoxOyBmb250LXNpemU6MTNweDsgdGV4dC1hbGlnbjpqdXN0aWZ5OyBwYWRkaW5nOiA1cHg7IGJhY2tncm91bmQ6bWFnZW50YSc+CiAgICAgICAgICBTb2xvIGNvbSBhY8O6bXVsbyBkZSBhcmdpbGEgZSBkcmVuYWdlbSBkZWZpY2llbnRlLCB0w61waWNvIGRlIMOhcmVhcyBwbGFuYXMgZSBtYWwgZHJlbmFkYXMgcHLDs3hpbWFzIGEgdsOhcnplYXMuCiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA=" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_3a24a4515b90eab5496aed8bc88ad43e.setContent(i_frame_f6fe72ee7362abb993ef3df8f4ef0f7d);
+            
+        
+
+        marker_b00b0b04e94f671e8d6691cef8fb7a13.bindPopup(popup_3a24a4515b90eab5496aed8bc88ad43e)
+        ;
+
+        
+    
+    
+            marker_b00b0b04e94f671e8d6691cef8fb7a13.bindTooltip(
+                `<div>
+                     Planossolo - Santa Helena
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b00b0b04e94f671e8d6691cef8fb7a13.setIcon(icon_c57c205ec4c6b66ff89931422743bdac);
+            
+    
+            var circle_b07316efea92f8495ae0cb5b26b0cd40 = L.circle(
+                [-25.3245, -54.0786],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_073da404a1d7825710afdbb64abd0b22 = L.marker(
+                [-25.3245, -54.0786],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_5653aaff747491d534b92b958a018117 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_567eaca7987b09d0d2c0eb5377874e8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_9d51bc165318acecf4a7dd3e6f20ab3b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5MYXRvc3NvbG8gVmVybWVsaG8gLSBNZWRpYW5laXJhPC9oND4KICAgICAgPGRpdiBzdHlsZT0nZGlzcGxheTpmbGV4OyBnYXA6MTBweDsnPgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MCAwIDQ1JTsnPgogICAgICAgICAgPGltZyBzcmM9J2ltYWdlcy9sYXRvc3NvbG9fbWVkaWFuZWlyYS5qcGcnIGFsdD0nTGF0b3Nzb2xvIFZlcm1lbGhvIC0gTWVkaWFuZWlyYScgc3R5bGU9J3dpZHRoOjEwMCU7IGJvcmRlci1yYWRpdXM6NnB4OycvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MTsgZm9udC1zaXplOjEzcHg7IHRleHQtYWxpZ246anVzdGlmeTsgcGFkZGluZzogNXB4OyBiYWNrZ3JvdW5kOm1hZ2VudGEnPgogICAgICAgICAgU29sbyBwcm9mdW5kbyBkZSBvcmlnZW0gYmFzw6FsdGljYSwgY29tIGJvYSBlc3RydXR1cmEgZSBkcmVuYWdlbS4gTXVpdG8gdXRpbGl6YWRvIHBhcmEgYWdyaWN1bHR1cmEgaW50ZW5zaXZhLgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAg" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_567eaca7987b09d0d2c0eb5377874e8d.setContent(i_frame_9d51bc165318acecf4a7dd3e6f20ab3b);
+            
+        
+
+        marker_073da404a1d7825710afdbb64abd0b22.bindPopup(popup_567eaca7987b09d0d2c0eb5377874e8d)
+        ;
+
+        
+    
+    
+            marker_073da404a1d7825710afdbb64abd0b22.bindTooltip(
+                `<div>
+                     Latossolo Vermelho - Medianeira
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_073da404a1d7825710afdbb64abd0b22.setIcon(icon_5653aaff747491d534b92b958a018117);
+            
+    
+            var circle_2b483670b21680c1f6f575d98644579b = L.circle(
+                [-24.2558, -53.9505],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_6b50e07de1fc8dbb60724ed8ba02fe13 = L.marker(
+                [-24.2558, -53.9505],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_84b5f93796d40c350ed8e8f1474922ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9458fade07606c01f10b581f52b2d7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_27847a574dd4cd1529bf6efc7325ff08 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5OZW9zc29sbyBRdWFydHphcsOqbmljbyAtIEFzc2lzIENoYXRlYXVicmlhbmQ8L2g0PgogICAgICA8ZGl2IHN0eWxlPSdkaXNwbGF5OmZsZXg7IGdhcDoxMHB4Oyc+CiAgICAgICAgPGRpdiBzdHlsZT0nZmxleDowIDAgNDUlOyc+CiAgICAgICAgICA8aW1nIHNyYz0naW1hZ2VzL25lb3Nzb2xvX2Fzc2lzLmpwZycgYWx0PSdOZW9zc29sbyBRdWFydHphcsOqbmljbyAtIEFzc2lzIENoYXRlYXVicmlhbmQnIHN0eWxlPSd3aWR0aDoxMDAlOyBib3JkZXItcmFkaXVzOjZweDsnLz4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IHN0eWxlPSdmbGV4OjE7IGZvbnQtc2l6ZToxM3B4OyB0ZXh0LWFsaWduOmp1c3RpZnk7IHBhZGRpbmc6IDVweDsgYmFja2dyb3VuZDptYWdlbnRhJz4KICAgICAgICAgIFNvbG9zIGFyZW5vc29zIGUgcG91Y28gZGVzZW52b2x2aWRvcywgZGUgYmFpeGEgZmVydGlsaWRhZGUgbmF0dXJhbCwgZm9ybWFkb3MgYSBwYXJ0aXIgZGUgZGVww7NzaXRvcyByZWNlbnRlcy4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIA==" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_f9458fade07606c01f10b581f52b2d7d.setContent(i_frame_27847a574dd4cd1529bf6efc7325ff08);
+            
+        
+
+        marker_6b50e07de1fc8dbb60724ed8ba02fe13.bindPopup(popup_f9458fade07606c01f10b581f52b2d7d)
+        ;
+
+        
+    
+    
+            marker_6b50e07de1fc8dbb60724ed8ba02fe13.bindTooltip(
+                `<div>
+                     Neossolo Quartzarênico - Assis Chateaubriand
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b50e07de1fc8dbb60724ed8ba02fe13.setIcon(icon_84b5f93796d40c350ed8e8f1474922ec);
+            
+    
+            var circle_d72a999360615faee7b223676c27e7c1 = L.circle(
+                [-24.37, -53.95],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var marker_e393bd8c81bf169eea1cb1aa3b457604 = L.marker(
+                [-24.37, -53.95],
+                {
+}
+            ).addTo(map_fe7352a21fff12f26b91191512aa41e4);
+        
+    
+            var icon_3a2270d8085944bbbf6ec2f25b3ea665 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28e73ce69a9b19632974c5e6dcd33361 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var i_frame_bdf7cf522c1c05e20b91f8013cd4b89b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9J3dpZHRoOjUwMHB4Oyc+CiAgICAgIDxoNCBzdHlsZT0nbWFyZ2luLWJvdHRvbTo2cHg7IGZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Jz5BcmVuaXRvIENhaXXDoSAtIFBhbG90aW5hIFN1ZG9lc3RlPC9oND4KICAgICAgPGRpdiBzdHlsZT0nZGlzcGxheTpmbGV4OyBnYXA6MTBweDsnPgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MCAwIDQ1JTsnPgogICAgICAgICAgPGltZyBzcmM9J2ltYWdlcy9jYWl1YV9wYWxvdGluYS5qcGcnIGFsdD0nQXJlbml0byBDYWl1w6EgLSBQYWxvdGluYSBTdWRvZXN0ZScgc3R5bGU9J3dpZHRoOjEwMCU7IGJvcmRlci1yYWRpdXM6NnB4OycvPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgc3R5bGU9J2ZsZXg6MTsgZm9udC1zaXplOjEzcHg7IHRleHQtYWxpZ246anVzdGlmeTsgcGFkZGluZzogNXB4OyBiYWNrZ3JvdW5kOm1hZ2VudGEnPgogICAgICAgICAgU29sbyBmb3JtYWRvIGEgcGFydGlyIGRvIEFyZW5pdG8gQ2FpdcOhLCBtYXRlcmlhbCBzZWRpbWVudGFyIGFsdGFtZW50ZSBhcmVub3NvLCBjb20gYmFpeGEgY2FwYWNpZGFkZSBkZSByZXRlbsOnw6NvIGRlIG51dHJpZW50ZXMuCiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA=" width="500" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_28e73ce69a9b19632974c5e6dcd33361.setContent(i_frame_bdf7cf522c1c05e20b91f8013cd4b89b);
+            
+        
+
+        marker_e393bd8c81bf169eea1cb1aa3b457604.bindPopup(popup_28e73ce69a9b19632974c5e6dcd33361)
+        ;
+
+        
+    
+    
+            marker_e393bd8c81bf169eea1cb1aa3b457604.bindTooltip(
+                `<div>
+                     Arenito Caiuá - Palotina Sudoeste
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e393bd8c81bf169eea1cb1aa3b457604.setIcon(icon_3a2270d8085944bbbf6ec2f25b3ea665);
+            
+    
+            map_fe7352a21fff12f26b91191512aa41e4.fitBounds(
+                [[-25.5163, -54.5851], [-24.0906, -53.4551]],
+                {}
+            );
+        
+</script>
+</html>

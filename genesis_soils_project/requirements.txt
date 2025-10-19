@@ -2,3 +2,4 @@ dash
 folium
 geopandas
 branca
+scipy
