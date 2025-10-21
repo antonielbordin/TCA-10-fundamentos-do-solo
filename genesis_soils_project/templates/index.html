@@ -9,15 +9,38 @@
       padding: 0;
       height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
       background-color: #f2f2f2;
-      font-family: sans-serif;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    header {
+      width: 100%;
+      background-color: #2f9ccb;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    header p {
+      margin: 10px auto 0;
+      font-size: 0.95em;
+      max-width: 1024px;
+      line-height: 1.5;
     }
 
     #map-container {
-      width: 80%;
-      height: 80%;
+      width: 98%;
+      height: 88%; /* ocupa o restante da tela */
+      margin-top: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       overflow: hidden;
@@ -31,6 +54,14 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>🗺️🌱 Mapa Pedológico - Região Oeste do Paraná</h1>
+    <p>
+      Este mapa interativo apresenta a distribuição dos principais tipos de solos da região oeste do Paraná,
+      com base em dados pedológicos da Embrapa. A triangulação representa as áreas de estudo e amostragem,
+      permitindo uma visualização espacial das características e formações geológicas predominantes.
+    </p>
+  </header>
   <div id="map-container">
     <iframe src="{{ url_for('static', filename='map.html') }}"></iframe>
   </div>

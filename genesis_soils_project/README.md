@@ -1,147 +1,154 @@
-Decisão 👏 — combinar visualização geográfica real (com Folium) e gamificação interativa (com Dash) vai te permitir criar um projeto didático e tecnológico, perfeito para uma disciplina de “Fundamentos de Solo” com foco em Gênese dos Solos.
+# 🌱 Interactive Pedological Map - Western Paraná
 
-Passo a passo:
+An open-source project for interactive visualization of soil distribution in the Western region of Paraná, Brazil, developed with Python, Flask, and Folium.
 
-## 🌍 1. Estrutura geral do projeto
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8%2B-green.svg)
 
-A ideia é construir uma aplicação Python que tenha:
+## 📋 About the Project
 
-- Um mapa interativo (usando Folium) mostrando pontos ou regiões com tipos de solo e sua rocha-mãe.
+This project presents an interactive map that displays the spatial distribution of main soil types in Western Paraná, based on pedological data from Embrapa and other research institutions. The application uses Delaunay triangulation to represent study and sampling areas, providing a georeferenced view of the region's pedological characteristics.
 
-- Uma interface web interativa (usando Dash) onde o aluno possa:
+### 🎯 Objectives
 
-  - clicar em botões temáticos (ex.: Clima, Organismos, Relevo, Tempo, Material de origem);
-  - responder perguntas curtas (mini-quizzes);
-  - ver informações e imagens relacionadas à formação do solo.
+- Visualize spatial distribution of soils in Western Paraná
+- Provide technical information about each soil type
+- Facilitate the study of soil genesis and classification
+- Serve as an educational tool for students and professionals
 
-## ⚙️ 2. Estrutura de pastas sugerida
+## 🗂️ Project Structure
 
-```bash
-projeto_genese_solos/
+```
+pedology-project/
+├── app.py               # Main Flask application
+├── maps_soils.py        # Interactive map generation
+├── requirements.txt     # Project dependencies
 ├── data/
-│   ├── solos_brasil.geojson        # Dados geográficos dos solos
-│   └── imagens/                    # Ilustrações de tipos de solo
-├── notebooks/
-│   └── mapa_interativo.ipynb       # Testes do mapa Folium
-├── app.py                          # Aplicação principal Dash
-├── requirements.txt                # Dependências
-└── README.md                       # Explicação do projeto
+│   └── soils.json       # Soil data (coordinates, descriptions, images)
+├── static/
+│   └── map.html         # Automatically generated map
+└── templates/
+    └── index.html       # Main application template
 ```
 
-## 🧠 3. Etapas sugeridas
+## 🚀 Installation and Setup
 
-🔹 Etapa 1 – Criar o mapa com Folium
+### Prerequisites
 
-- 1. Instale:
+- Python 3.8 or higher
+- pip (Python package manager)
 
-```bash
-pip install folium geopandas
+### Installation Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/antonielbordin/TCA-10-fundamentos-do-solo
+   cd TCA-10-fundamentos-do-solo/genesis_soils_project
+   ```
+
+2. **Create a virtual environment (recommended)**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   # or
+   venv\Scripts\activate     # Windows
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the application**
+   ```bash
+   python app.py
+   ```
+
+5. **Access in your browser**
+   ```
+   http://localhost:8050
+   ```
+
+## 📊 Dependencies
+
+The project uses the following Python libraries:
+
+- **Flask** (2.0+): Web framework for the application
+- **Folium** (0.14+): Interactive map generation
+- **SciPy** (1.7+): Scientific calculations and Delaunay triangulation
+- **NumPy** (1.21+): Numerical array manipulation
+
+## 🗺️ Features
+
+### Interactive Map
+- **Spatial visualization** of sampling points
+- **Delaunay triangulation** for area representation
+- **Intuitive zoom and navigation**
+- **Automatic bounds** based on coordinates
+
+### Informative Popups
+- **Soil profile images**
+- **Summary and technical description**
+- **Parent rock and source material**
+- **Official bibliographic references**
+- **Interactive button** for more details
+
+### Included Soil Types
+- Red Latosols (Latossolos Vermelhos)
+- Red and Red-Yellow Argisols (Argissolos)
+- Quartzipsamments (Neossolos Quartzarênicos)
+- Haplustepts (Cambissolos Háplicos)
+- Gleysols (Gleissolos)
+- Planosols (Planossolos)
+- Red Nitosols (Nitossolos Vermelhos)
+
+## 🔧 Data Structure
+
+The `data/soils.json` file contains the complete data structure:
+
+```json
+{
+  "id": "unique_identifier",
+  "name": "Soil Name - City",
+  "coords": [latitude, longitude],
+  "img_solo": "image_URL",
+  "description": {
+    "summary": "Summary description",
+    "technical": "Detailed technical description"
+  },
+  "mother_rock": "Parent rock",
+  "reference": [
+    {
+      "title": "Reference title",
+      "url": "Reference URL"
+    }
+  ],
+  "note": "Additional observations"
+}
 ```
 
-- 2. Gere um mapa base:
+## 📚 Data Sources
 
-```python
-import folium
+### Official Institutions
+- **Embrapa Soils**: Technical classification and images
+- **IAPAR**: Regional data from Paraná
+- **SEAB/DERAL**: Agricultural zoning
+- **CPRM**: Geological data
 
-mapa = folium.Map(location=[-24.5, -53.5], zoom_start=6, tiles='Stamen Terrain')
-folium.Marker(
-    location=[-24.5, -53.5],
-    popup="Latossolo Vermelho - Formação basáltica (Oeste do Paraná)",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(mapa)
+### Scientific References
+- Brazilian Soil Classification System (SiBCS)
+- Paraná Soil Atlas
+- Embrapa technical publications
+- Peer-reviewed scientific articles
 
-mapa.save('mapa_solos.html')
-```
+## 📄 License
 
-- 3. Adicione camadas com diferentes tipos de solo e, se possível, um GeoJSON com dados reais (ex.: do IBGE – Mapa de Solos do Brasil).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-🔹 Etapa 2 – Criar a interface gamificada com Dash
+## 🙋‍♂️ Authors
 
-- 1. Instale:
+- **Antoniel Bordin** - *Initial development* - [antonielbordin](https://github.com/antonielbordin)
 
-```bash
-pip install dash
-```
+---
 
-- 2. Estrutura básica:
-
-```python
-from dash import Dash, html, dcc, Output, Input
-
-app = Dash(__name__)
-
-app.layout = html.Div([
-    html.H1("Gênese dos Solos - Jogo Interativo 🌱"),
-    html.P("Selecione um fator pedogenético:"),
-    dcc.Dropdown(
-        id="fator",
-        options=[
-            {"label": "Clima", "value": "clima"},
-            {"label": "Organismos", "value": "organismos"},
-            {"label": "Relevo", "value": "relevo"},
-            {"label": "Tempo", "value": "tempo"},
-            {"label": "Material de Origem", "value": "material"}
-        ],
-        placeholder="Escolha um fator..."
-    ),
-    html.Div(id="quiz")
-])
-
-@app.callback(
-    Output("quiz", "children"),
-    Input("fator", "value")
-)
-def mostrar_quiz(fator):
-    if fator == "clima":
-        return html.Div([
-            html.H3("🌦️ Clima"),
-            html.P("Pergunta: Como o clima influencia a formação do solo?"),
-            html.Ul([
-                html.Li("A) Aumenta a erosão e a lixiviação"),
-                html.Li("B) Não tem influência"),
-                html.Li("C) Torna o solo impermeável")
-            ])
-        ])
-    elif fator == "organismos":
-        return html.Div([
-            html.H3("🌿 Organismos"),
-            html.P("Pergunta: Qual o papel dos organismos na gênese do solo?"),
-            html.Ul([
-                html.Li("A) Adicionam matéria orgânica e aceleram decomposição"),
-                html.Li("B) Compactam o solo"),
-                html.Li("C) Diminuem a fertilidade")
-            ])
-        ])
-    else:
-        return html.Div(["Selecione um fator para começar o quiz."])
-
-if __name__ == "__main__":
-    app.run_server(debug=True)
-```
-
-🔹 Etapa 3 – Integrar o mapa
-
-Você pode incorporar o mapa do Folium dentro do Dash:
-
-```python
-import base64
-
-# depois de gerar o mapa com folium.save('mapa_solos.html')
-app.layout = html.Div([
-    html.H1("Mapa e Gênese dos Solos"),
-    html.Iframe(srcDoc=open('mapa_solos.html', 'r').read(), width='100%', height='500'),
-    # ...aqui vem o quiz abaixo...
-])
-```
-
-🔹 Etapa 4 – Gamificação extra (opcional)
-
-- Atribuir pontuação a cada resposta correta.
-- Adicionar ranking ou feedback animado (“Parabéns! Você entendeu o papel do clima!”).
-- Usar bibliotecas como dash_bootstrap_components para deixar o layout mais bonito.
-
-🎯 Resultado final esperado
-
-- 🌍 Um mapa interativo real, mostrando solos do Brasil (ou do Paraná), com camadas e legendas.
-- 🧩 Uma interface interativa para ensinar e testar conhecimentos sobre a gênese dos solos.
-- 👩‍🏫 Uma ferramenta visual e prática para usar na apresentação oral da disciplina.
+**Developed with ❤️ for the scientific and educational community**

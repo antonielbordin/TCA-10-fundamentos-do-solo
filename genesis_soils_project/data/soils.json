@@ -3,70 +3,189 @@
     "id": "s_cascavel",
     "name": "Latossolo Vermelho - Cascavel",
     "coords": [-24.9576, -53.4551],
-    "img": "images/latossolo_vermelho.jpg",
-    "description": "Solo profundo e bem drenado, desenvolvido sobre rochas basálticas da Formação Serra Geral. Rico em óxidos de ferro, apresenta coloração avermelhada característica."
+    "img_solo": "https://www.embrapa.br/documents/58057223/66921566/latvernitos_000gnbqv62a02wx5ok0edacxlv284s75.JPG/6a1d8402-808e-98b8-00ba-d1517e5397fd?t=1639049561615",
+    "description": {
+      "summary": "Solo profundo, bem drenado, desenvolvido sobre basaltos da Formação Serra Geral. Coloração vermelha intensa devido aos óxidos de ferro; alta aptidão agrícola.",
+      "technical": "Latossolo Vermelho distrófico típico - Horizonte B latossólico profundo (>1,5m), textura argilosa, estrutura granular, baixa saturação por bases. Desenvolvido a partir de rochas basálticas com avançado grau de intemperismo."
+    },
+    "mother_rock": "Basalto – Formação Serra Geral",
+    "reference": [
+      {
+        "title": "Sistema Brasileiro de Classificação de Solos - SiBCS (Embrapa, 2018)",
+        "url": "https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-vermelhos"
+      }
+    ],
+    "note": "Latossolos ocupam aproximadamente 40% da área do Oeste Paranaense (Atlas Solos PR, 2020)."
   },
+
   {
     "id": "s_toledo",
     "name": "Argissolo Vermelho - Toledo",
     "coords": [-24.7246, -53.7431],
-    "img": "images/argissolo_toledo.jpg",
-    "description": "Solo de origem basáltica, com acúmulo de argila no horizonte B. Boa fertilidade natural e relevo suave ondulado."
+    "img_solo": "https://www.embrapa.br/documents/58057223/66922670/argverm_000gnai1xfm02wx5ok0liq1mqsg4z2dl.jpg/a6dc037e-0364-7a54-70a9-eded0130a91b?t=1639049580090",
+    "description": {
+      "summary": "Solo com nitida diferenciação textural entre horizontes A e B, relevo suave ondulado, fertilidade natural média a baixa.",
+      "technical": "Argissolo Vermelho distrófico - Horizonte B textural com significativo incremento de argila (>20%), horizonte A moderado, presença de cerosidade. Desenvolvido sobre material basáltico."
+    },
+    "mother_rock": "Basalto – Formação Serra Geral",
+    "reference": [
+      {
+        "title": "Classificação de Solos - Argissolos (Embrapa Solos)",
+        "url": "https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/argissolos/argissolos-vermelhos"
+      }
+    ],
+    "note": "Argissolos representam cerca de 25% dos solos da região Oeste (IAPAR, 2017)."
   },
+
   {
     "id": "s_palotina",
-    "name": "Argissolo/Neossolo - Palotina",
+    "name": "Neossolo Quartzarênico - Palotina",
     "coords": [-24.3233, -53.8711],
-    "img": "images/argissolo_palotina.jpg",
-    "description": "Transição entre basaltos e depósitos arenosos do Arenito Caiuá. Solos menos profundos e com textura arenosa predominante."
+    "img_solo": "https://www.embrapa.br/documents/1355219/14179066/Neossolo_perfil2.jpg/cdded65c-5f7b-40bf-8607-f260d9d4893f?t=1467831467539",
+    "description": {
+      "summary": "Solos jovens e arenosos sobre Arenito Caiuá, baixa capacidade de retenção de água e nutrientes, susceptíveis à erosão.",
+      "technical": "Neossolo Quartzarênico órtico - Horizonte A sobre material C arenoso, textura areia/franco-arenosa em todo perfil, baixa CTC (<4 cmolc/kg), drenagem excessiva."
+    },
+    "mother_rock": "Arenito Caiuá - Grupo Bauru",
+    "reference": [
+      {
+        "title": "NEOSSOLO QUARTZARÊNICO NA BACIA HIDROGRÁFICA PARANÁ lll",
+        "url": "https://www.agricultura.pr.gov.br/PronasolosPR/Pagina/NEOSSOLO-QUARTZARENICO-NA-BACIA-HIDROGRAFICA-PARANA-lll-POSICIONAMENTO-NA"
+      }
+    ],
+    "note": "Formação Caiuá ocupa porção noroeste do Paraná com solos predominantemente arenosos."
   },
+
   {
     "id": "s_rondon",
-    "name": "Solos Coluviais - Marechal C. Rondon",
+    "name": "Cambissolo Háplico - Marechal Cândido Rondon",
     "coords": [-24.5486, -54.0236],
-    "img": "images/coluvial_rondon.jpg",
-    "description": "Depósitos coluviais mistos, formados pela acumulação de materiais transportados por gravidade. Textura variável e boa drenagem."
+    "img_solo": "https://www.embrapa.br/documents/58057223/66885917/Figura18_000gdejjv5t02wx5ok0rofsmqdba2au7.jpg/e3068ed5-ceea-5870-3dcb-fb95a49e48fa?t=1638990411115",
+    "description": {
+      "summary": "Solos pouco desenvolvidos em áreas de encosta, material originário de colúvios, relevo ondulado a forte ondulado.",
+      "technical": "Cambissolo Háplico Tb distrófico - Horizonte B incipiente (Bi), presença de pedregosidade, desenvolvimento pedogenético inicial. Material de origem coluvial diversificado."
+    },
+    "mother_rock": "Material coluvial (basalto + arenito)",
+    "reference": [
+      {
+        "title": "Cambissolos - Caracterização e Ocorrência (Embrapa)",
+        "url": "https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/bioma-caatinga/solos/cambissolos"
+      }
+    ],
+    "note": "Cambissolos ocorrem em áreas de relevo mais acidentado, associados a encostas e sopés."
   },
+
   {
     "id": "s_guaira",
     "name": "Neossolo Quartzarênico - Guaíra",
     "coords": [-24.0906, -54.2786],
-    "img": "images/neossolo_guaira.jpg",
-    "description": "Solos jovens e arenosos formados sobre depósitos aluviais recentes, comuns em margens do Rio Paraná."
+    "img_solo": "https://www.agricultura.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2021-08/figura_1_-_neossolo_quartzarenico_ortico_tipico.jpg",
+    "description": {
+      "summary": "Solos extremamente arenosos, muito profundos, baixíssima fertilidade natural, susceptíveis à erosão eólica e hídrica.",
+      "technical": "Neossolo Quartzarênico órtico - Teor de areia >85%, horizonte A fraco sobre material C quartzoso, CTC muito baixa (<2 cmolc/kg), saturação por bases <20%."
+    },
+    "mother_rock": "Arenito Caiuá - Grupo Bauru",
+    "reference": [
+      {
+        "title": "NEOSSOLO QUARTZARÊNICO NA BACIA HIDROGRÁFICA PARANÁ lll",
+        "url": "https://www.agricultura.pr.gov.br/PronasolosPR/Pagina/NEOSSOLO-QUARTZARENICO-NA-BACIA-HIDROGRAFICA-PARANA-lll-POSICIONAMENTO-NA"
+      }
+    ],
+    "note": "Região com os solos mais arenosos do Estado, exigindo manejo específico."
   },
+
   {
     "id": "s_foz",
-    "name": "Solos Aluviais - Foz do Iguaçu",
+    "name": "Gleissolo - Foz do Iguaçu",
     "coords": [-25.5163, -54.5851],
-    "img": "images/alluvial_foz.jpg",
-    "description": "Solos jovens formados por sedimentos recentes das planícies fluviais do Iguaçu e Paraná. Alta variabilidade e baixa maturidade pedogenética."
+    "img_solo": "https://www.agricultura.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2021-09/figura_5_-_latossolo_vermelho_0.jpg",
+    "description": {
+      "summary": "Solos hidromórficos em várzeas, sujeitos a períodos de saturação hídrica, fertilidade natural variável.",
+      "technical": "Gleissolo Melânico - Horizonte A hístico ou melânico, presença de horizonte glei, cores cinza-azuladas com mosqueados, saturação hídrica sazonal."
+    },
+    "mother_rock": "Sedimentos aluviais recentes",
+    "reference": [
+      {
+        "title": "Campanha de levantamento de solos e vegetação protetiva de rios nos Subplanaltos Campo Mourão, São Francisco, Cascavel e Foz do Iguaçu",
+        "url": "https://www.agricultura.pr.gov.br/Galeria-de-Imagens/Campanha-de-levantamento-de-solos-e-vegetacao-protetiva-de-rios-nos-Subplanaltos"
+      }
+    ],
+    "note": "Ocorrem nas planícies aluviais dos rios da região, sujeitos a inundações periódicas."
   },
+
   {
     "id": "s_santahelena",
     "name": "Planossolo - Santa Helena",
     "coords": [-24.8689, -54.5122],
-    "img": "images/planossolo_santahelena.jpg",
-    "description": "Solo com acúmulo de argila e drenagem deficiente, típico de áreas planas e mal drenadas próximas a várzeas."
+    "img_solo": "https://www.embrapa.br/documents/58057223/66921197/Planossolo_201ID-Sa5AoieDg0.jpg/f0dfb2b2-95c2-987b-d169-850977b493de?t=1639049555431",
+    "description": {
+      "summary": "Solos com horizonte B plânico, restrição à drenagem interna, sujeitos a encharcamento superficial.",
+      "technical": "Planossolo Nátrico - Horizonte B plânico com aumento abrupto de argila, estrutura maciça, baixa condutividade hidráulica, saturação por sódio variável."
+    },
+    "mother_rock": "Sedimentos lacustres/paludais",
+    "reference": [
+      {
+        "title": "Planossolos - Diagnóstico e Manejo (Embrapa)",
+        "url": "https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/planossolos"
+      }
+    ],
+    "note": "Associados às áreas planas próximas ao Lago de Itaipu, com problemas de drenagem."
   },
+
   {
     "id": "s_medianeira",
-    "name": "Latossolo Vermelho - Medianeira",
+    "name": "Nitossolo Vermelho - Medianeira",
     "coords": [-25.3245, -54.0786],
-    "img": "images/latossolo_medianeira.jpg",
-    "description": "Solo profundo de origem basáltica, com boa estrutura e drenagem. Muito utilizado para agricultura intensiva."
+    "img_solo": "https://www.embrapa.br/documents/58057223/66922098/NitVerET_000gn7p9k3y02wx5ok0liq1mqb8ck46f.JPG/b585c410-677f-6df8-6755-69c2c5dfba77?t=1639049570774",
+    "description": {
+      "summary": "Solo muito argiloso, estrutura blocosa angular, alta capacidade de troca catiônica, desenvolvido sobre basalto.",
+      "technical": "Nitossolo Vermelho distrófico - Horizonte B nítico com estrutura blocosa angular, alta relação Ki (<0,75), elevado teor de argila de atividade alta, transição gradual entre horizontes."
+    },
+    "mother_rock": "Basalto – Formação Serra Geral",
+    "reference": [
+      {
+        "title": "Nitossolos - Caracterização e Ocorrência (Embrapa)",
+        "url": "https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/nitossolos/nitossolos-vermelhos"
+      }
+    ],
+    "note": "Nitossolos são solos de alta fertilidade natural, com boa estrutura e porosidade."
   },
+
   {
     "id": "s_assis",
     "name": "Neossolo Quartzarênico - Assis Chateaubriand",
     "coords": [-24.2558, -53.9505],
-    "img": "images/neossolo_assis.jpg",
-    "description": "Solos arenosos e pouco desenvolvidos, de baixa fertilidade natural, formados a partir de depósitos recentes."
+    "img_solo": "https://www.embrapa.br/documents/1355219/14179066/Neossolo_perfil2.jpg/cdded65c-5f7b-40bf-8607-f260d9d4893f?t=1467831467539",
+    "description": {
+      "summary": "Solos arenosos, muito profundos, baixíssima fertilidade natural, susceptíveis à erosão.",
+      "technical": "Neossolo Quartzarênico órtico - Teor de areia >90%, horizonte A fraco sobre material C quartzoso, CTC muito baixa (<1,5 cmolc/kg), saturação por bases <15%."
+    },
+    "mother_rock": "Arenito Caiuá - Grupo Bauru",
+    "reference": [
+      {
+        "title": "NEOSSOLO QUARTZARÊNICO NA BACIA HIDROGRÁFICA PARANÁ lll",
+        "url": "https://www.agricultura.pr.gov.br/PronasolosPR/Pagina/NEOSSOLO-QUARTZARENICO-NA-BACIA-HIDROGRAFICA-PARANA-lll-POSICIONAMENTO-NA"
+      }
+    ],
+    "note": "Área com restrições ao uso agrícola intensivo, requerendo práticas conservacionistas."
   },
+
   {
     "id": "s_palotina2",
-    "name": "Arenito Caiuá - Palotina Sudoeste",
+    "name": "Argissolo Vermelho-Amarelo - Palotina Sudoeste",
     "coords": [-24.3700, -53.9500],
-    "img": "images/caiua_palotina.jpg",
-    "description": "Solo formado a partir do Arenito Caiuá, material sedimentar altamente arenoso, com baixa capacidade de retenção de nutrientes."
+    "img_solo": "https://www.agricultura.pr.gov.br/sites/default/arquivos_restritos/files/styles/escala_1140_largura_/public/imagem/2021-08/figura_2_-_argissolo_amarelo.webp?itok=gOY8rcJG",
+    "description": {
+      "summary": "Solos com diferenciação textural moderada, desenvolvidos sobre material arenoso, fertilidade natural baixa.",
+      "technical": "Argissolo Vermelho-Amarelo distrófico - Horizonte B textural com incremento moderado de argila, cores amarelas a vermelho-amareladas, textura média/argilosa, relevo suave ondulado."
+    },
+    "mother_rock": "Arenito Caiuá com influência basáltica",
+    "reference": [
+      {
+        "title": "ARGISSOLO AMARELO NOS SUBPLANALTOS CAMPO MOURÃO E UMUARAMA: ocorrência, características e potencial de uso",
+        "url": "https://www.agricultura.pr.gov.br/PronasolosPR/Pagina/ARGISSOLO-AMARELO-NOS-SUBPLANALTOS-CAMPO-MOURAO-E-UMUARAMA-ocorrencia"
+      }
+    ],
+    "note": "Área de transição entre a Formação Serra Geral (basalto) e Formação Caiuá (arenito)."
   }
 ]

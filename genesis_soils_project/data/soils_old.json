@@ -1,0 +1,112 @@
+[
+  {
+    "id": "s_cascavel",
+    "name": "Latossolo Vermelho - Cascavel",
+    "coords": [-24.9576, -53.4551],
+    "img_solo": "images/latossolo_vermelho.png",
+    "description": {
+      "summary": "Solo profundo, bem drenado e desenvolvido sobre basaltos da Formação Serra Geral. Apresenta coloração avermelhada intensa devido ao alto teor de óxidos de ferro e é amplamente utilizado na agricultura.",
+      "technical": "Os Latossolos constituem a classe com o maior grau de evolução pedogenética, resultante de intensas transformações que destituem o solo de minerais primários ou secundários de baixa resistência ao intemperismo. São solos minerais profundos, com horizonte B latossólico (Bw) abaixo de qualquer tipo de horizonte superficial, à exceção do horizonte hístico (Embrapa, 2018)."
+    },
+    "mother_rock": "Basalto – Formação Serra Geral"
+  },
+  {
+    "id": "s_toledo",
+    "name": "Argissolo Vermelho - Toledo",
+    "coords": [-24.7246, -53.7431],
+    "img_solo": "images/argissolo_vermelho.png",
+    "description": {
+      "summary": "Solo com acúmulo de argila no horizonte B, moderadamente profundo e de boa fertilidade natural. O relevo suavemente ondulado favorece o uso agrícola com práticas conservacionistas.",
+      "technical": "Os Argissolos caracterizam-se por apresentarem um horizonte B textural, imediatamente abaixo do horizonte A, com aumento nítido de argila em relação ao horizonte sobrejacente. Possuem boa estrutura, drenagem variada e fertilidade média a alta, dependendo do material de origem (Embrapa, 2018)."
+    },
+    "mother_rock": "Basalto"
+  },
+  {
+    "id": "s_palotina",
+    "name": "Argissolo/Neossolo - Palotina",
+    "coords": [-24.3233, -53.8711],
+    "img_solo": "images/argissolo_neossolo.png",
+    "description": {
+      "summary": "Área de transição entre solos argilosos e arenosos formados sobre o Arenito Caiuá. Solos menos profundos, com textura média a arenosa e drenagem rápida.",
+      "technical": "Representa a transição entre Argissolos e Neossolos Quartzarênicos, onde há variação textural significativa entre horizontes e predomínio de areia grossa em camadas superficiais. São solos jovens e susceptíveis à erosão, especialmente sob declives e práticas inadequadas de manejo (Embrapa, 2018)."
+    },
+    "mother_rock": "Arenito Caiuá"
+  },
+  {
+    "id": "s_rondon",
+    "name": "Solos Coluviais - Marechal Cândido Rondon",
+    "coords": [-24.5486, -54.0236],
+    "img_solo": "images/coluvial.png",
+    "description": {
+      "summary": "Solos formados por deposição de materiais transportados por gravidade. Textura variável e boa drenagem, geralmente encontrados em encostas e sopés de relevo.",
+      "technical": "Os solos coluviais resultam do acúmulo de materiais de origem variada, transportados por movimentos de massa. Caracterizam-se por pouca diferenciação de horizontes e textura heterogênea, refletindo o material de origem misto e a deposição recente (Embrapa, 2018)."
+    },
+    "mother_rock": "Depósitos coluviais recentes"
+  },
+  {
+    "id": "s_guaira",
+    "name": "Neossolo Quartzarênico - Guaíra",
+    "coords": [-24.0906, -54.2786],
+    "img_solo": "images/neossolo_quartzarênico.png",
+    "description": {
+      "summary": "Solos jovens, pouco desenvolvidos e predominantemente arenosos, encontrados em planícies fluviais e depósitos aluviais recentes.",
+      "technical": "Os Neossolos Quartzarênicos são solos minerais com horizonte A assentado diretamente sobre o material de origem, sem horizonte B diagnóstico. Apresentam textura arenosa em todo o perfil e baixa capacidade de retenção de água e nutrientes, resultando em baixa fertilidade natural (Embrapa, 2018)."
+    },
+    "mother_rock": "Depósitos aluviais arenosos recentes"
+  },
+  {
+    "id": "s_foz",
+    "name": "Solos Aluviais - Foz do Iguaçu",
+    "coords": [-25.5163, -54.5851],
+    "img_solo": "images/alluvial_foz.jpg",
+    "description": {
+      "summary": "Solos formados por sedimentos recentes em planícies de inundação, com grande variabilidade textural e química.",
+      "technical": "Os solos aluviais correspondem a materiais inconsolidados depositados por cursos d’água recentes, com fraca diferenciação de horizontes e propriedades variáveis. Geralmente possuem drenagem imperfeita e elevada fertilidade devido à deposição contínua de sedimentos (Embrapa, 2018)."
+    },
+    "mother_rock": "Sedimentos aluviais recentes"
+  },
+  {
+    "id": "s_santahelena",
+    "name": "Planossolo - Santa Helena",
+    "coords": [-24.8689, -54.5122],
+    "img_solo": "images/planossolo_santahelena.jpg",
+    "description": {
+      "summary": "Solo típico de áreas planas e mal drenadas, com acúmulo de argila em camadas inferiores e drenagem deficiente.",
+      "technical": "Os Planossolos apresentam horizonte B plânico, abruptamente subjacente ao horizonte A, com aumento expressivo de argila e estrutura densa que restringe a percolação de água. São comuns em áreas planas e suscetíveis a encharcamento sazonal (Embrapa, 2018)."
+    },
+    "mother_rock": "Depósitos sedimentares de várzea"
+  },
+  {
+    "id": "s_medianeira",
+    "name": "Latossolo Vermelho - Medianeira",
+    "coords": [-25.3245, -54.0786],
+    "img_solo": "images/latossolo_vermelho.png",
+    "description": {
+      "summary": "Solo profundo e bem estruturado, de origem basáltica, com excelente drenagem e alta estabilidade física. Amplo uso agrícola na região.",
+      "technical": "Latossolos são solos minerais profundos, homogêneos e bem drenados, com baixa saturação por bases e predominância de óxidos de ferro e alumínio. Possuem elevada porosidade e estabilidade de agregados, sendo típicos de ambientes tropicais altamente intemperizados (Embrapa, 2018)."
+    },
+    "mother_rock": "Basalto – Formação Serra Geral"
+  },
+  {
+    "id": "s_assis",
+    "name": "Neossolo Quartzarênico - Assis Chateaubriand",
+    "coords": [-24.2558, -53.9505],
+    "img_solo": "images/neossolo_quartzarênicos.png",
+    "description": {
+      "summary": "Solo arenoso e pouco desenvolvido, de baixa fertilidade e alta susceptibilidade à erosão. Ocorre em áreas de deposição recente.",
+      "technical": "Os Neossolos Quartzarênicos apresentam horizonte A seguido diretamente do material de origem, com ausência de horizontes diagnósticos subsuperficiais. A textura é arenosa em todo o perfil e a capacidade de troca de cátions é extremamente baixa (Embrapa, 2018)."
+    },
+    "mother_rock": "Depósitos arenosos recentes"
+  },
+  {
+    "id": "s_palotina2",
+    "name": "Arenito Caiuá - Palotina Sudoeste",
+    "coords": [-24.3700, -53.9500],
+    "img_solo": "images/caiua_palotina.jpg",
+    "description": {
+      "summary": "Solo formado a partir do Arenito Caiuá, material sedimentar muito arenoso e de baixa retenção de nutrientes.",
+      "technical": "Os solos derivados do Arenito Caiuá caracterizam-se por textura predominantemente arenosa, estrutura fraca e baixa coesão. São altamente suscetíveis à erosão e apresentam baixa fertilidade natural, demandando manejo conservacionista rigoroso (Embrapa, 2018)."
+    },
+    "mother_rock": "Arenito Caiuá"
+  }
+]

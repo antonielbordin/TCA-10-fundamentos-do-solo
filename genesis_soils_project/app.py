@@ -5,9 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    maps = generate_map()
-    #html = maps.get_root().render()
-    #return render_template_string(html)
+    generate_map()
     return render_template("index.html")
 
 if __name__ == "__main__":
