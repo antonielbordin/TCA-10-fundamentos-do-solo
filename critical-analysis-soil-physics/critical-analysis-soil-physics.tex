@@ -1,0 +1,320 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+\usepackage{cite}
+
+% Configurações
+\setlength{\headheight}{14pt}
+\addtolength{\topmargin}{-2pt}
+% Definir a cor verdeagri
+\definecolor{verdeagri}{RGB}{34, 139, 34}  % verde floresta
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small Análise Crítica - Física do Solo e Agricultura 4.0}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\textbf{Análise Crítica: \\ Aplicação de Sensores de Umidade do Solo de Baixo Custo para 
+Manejo de Irrigação em Couve}}
+\author{Antoniel Bordin \\ Universidade Tecnologica Federal do Paraná}
+\date{2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Esta análise crítica examina o artigo ``Application of low-cost soil moisture sensors for 
+irrigation management in Brassica oleracea var. acephala cultivation'' de Pitoro et al. (2025), 
+focando na física do solo e na integração de tecnologias da Agricultura 4.0 com foco em sensores 
+SKU: CE09640 combinados com arduino e LEDs RGB aplicados na cultura de couve. Avalio 
+contribuições em calibração de sensores, curvas de retenção e monitoramento IoT, destacando 
+forças, limitações e impacto para agricultores de baixa renda.
+\end{abstract}
+
+\section{Introdução}
+O cenário global de escassez hídrica e crescimento 
+populacional impõe uma pressão sem precedentes sobre 
+os sistemas agrícolas, demandando saltos de eficiência 
+no uso da água.
+Neste contexto, presupoe-se que a física do solo, 
+especialmente a dinâmica da umidade, é crucial para a 
+agricultura sustentável em cenários de escassez hídrica.
+O artigo analisado \cite{pitoro2025} propõe um sistema 
+de monitoramento baseado em sensores capacitivos de 
+baixo custo (SKU: CE09640) integrado ao Arduino, com 
+alertas via LEDs RGB, testado em cultivo de couve. 
+
+\textbf{Tese desta análise:}
+Embora o trabalho avance na aplicação acessível de tecnologias 4.0 contendo uma solução inovadora 
+e validada para manejo de irrigação, subestima variações edáficas e desafios de escalabilidade, 
+limitando sua robustez em solos heterogêneos.
+
+\section{Contribuições para a Física dos Solos}
+
+\subsection{Determinação da Umidade}
+O cerne da contribuição do estudo reside na rigorosa calibração 
+dos sensores capacitivos SKU: CE09640. O método empregado, 
+baseado na perda de massa por secagem em condições ambientais 
+controladas, alinha-se com o padrão ouro gravimétrico.
+\begin{equation}
+\mu = \frac{m_w - m_d}{m_d} \times 100, \quad \theta_v = \mu \cdot \rho_b
+\end{equation}
+Os resultados da calibração: R $<$ -0.964 (correlação inversa 
+forte), R$^2$ $>$ 0.95 (ajuste alto), RMSE $<$ 0.05 (precisão 
+aceitável), indicam que, para o Latossolo Vermelho Distrófico 
+específico do experimento, o sensor responde de forma previsível 
+e precisa às variações de umidade.
+
+\subsection{Relação Teor de Água e Potencial}
+Uso de curvas de retenção via modelo van Genuchten ajustado:
+\begin{equation}
+\theta(\psi_m) = \theta_r + \frac{\theta_s - \theta_r}{[1 + (|\alpha \psi_m|^n)]^m}
+\end{equation}
+Contendo os seguintes parâmetros (0-0.20 m): $\alpha=1.225$, m=0.260, n=2.918, $\theta_r=0.172$, $\theta_s=0.782$ cm$^3$ cm$^{-3}$, 
+compondo uma integração rigorosa de métodos clássicos com sensores acessíveis, enriquecendo Física do Solo.
+
+\section{Contribuições para Agricultura 4.0}
+\subsection{Popularização de IoT}
+A arquitetura proposta por é composta de Sensores SKU: CE09640 (3.3-5.5V), Arduino Mega 2560 e 
+LEDs RGB (azul=saturado $>$ 0.48, verde/amarelo=intermediário 0.28 - 0.48, vermelho=seco $<$ 0.28 
+cm$^3$ cm$^{-3}$), com um custo estimado de $<$ R\$100.
+
+\subsection{Democratização e Eficiência}
+O uso de LEDs RGB como interface de usuário é um elemento de 
+inovação notável no contexto da Agricultura 4.0. Tradicionalmente, 
+as tecnologias 4.0 geram fluxos de dados digitais (gráficos, 
+números, alertas em apps, entre outros), sendo assim demandam 
+certo nível de alfabetização digital e treinamento para interpretação.
+Ao traduzir a leitura do sensor e, por consequência, o estado 
+hídrico do solo inferido pela física da medida em uma linguagem 
+visual universal (cores), o sistema reduz drasticamente a barreira 
+de entrada, propiciando assecibilidade à produtores com baixa escolaridade, 
+além de proporcionar sustentabilidade para pequenos produtores. WUP: 
+IMC 10.95 g L$^{-1}$ (economia 12\% vs ETc 12.42 g L$^{-1}$).
+
+\begin{center}
+  \begin{tabular}{|l|c|c|}
+  \hline
+  \textbf{Método} & \textbf{WUP (g L$^{-1}$)} & \textbf{Economia (\%)} \\
+  \hline
+  ETc & 12.42 & - \\
+  Sensores (IMC) & 10.95 & +12\% \\
+  Tensiômetros (IMT) & 9.82 & -  \\
+  \hline
+  \end{tabular}
+\end{center}
+
+\section{Limitações e Desafios para a Escalabilidade}
+Nesta revisão avaliamos as limitações apontadas pelo próprio 
+estudo no que tange ao contexto (Edáfico, Tecnológico e 
+Analítico) e outras inerentes à abordagem:
+
+\begin{enumerate}
+    \item \textbf{Variabilidade e Calibração:} A necessidade 
+    de calibração específica, embora bem executada, é uma 
+    barreira operacional. Para uma adoção ampla, seriam necessários 
+    protocolos simplificados de calibração "no campo" ou a 
+    disponibilização de bibliotecas de curvas de calibração para 
+    diferentes classes de solo.
+    \item \textbf{Desempenho em Extremos:} Como observado nos resultados, 
+    a precisão do sensor diminui nas faixas de solo muito seco 
+    %($\theta < 0,28$ cm$^{³}$ cm$^{⁻³}$) e muito úmido 
+    %($\theta > 0,48$ cm$^{³}$ cm$^{⁻³}$), de modo que saturação, a 
+    constante dielétrica do meio muda pouco, reduzindo a sensibilidade. Este 
+    é um limite físico do método capacitivo que deve ser comunicado aos usuários.
+    \item \textbf{Durabilidade e Manutenção:} O estudo foi de curta duração 
+    (dois ciclos), entretanto a durabilidade dos sensores de baixo custo, da eletrônica 
+    do Arduino e dos LEDs em condições adversas de campo (umidade, temperatura, 
+    raios UV) é uma questão em aberto, deste modo a manutenção do sistema, ainda que 
+    potencialmente baixa, precisa ser considerada para um periodo maior do que o exposto
+    no estudo.
+    \item \textbf{Integração com Outras Camadas da 4.0:} O sistema é, em sua 
+    essência, uma solução local e isolada. O verdadeiro potencial da Agricultura 4.0 
+    estaria na integração desses dados de umidade com outras fontes (imagens 
+    de satélite, estações meteorológicas, modelos de previsão) em uma plataforma 
+    de gestão, ou seja o protótipo atual é um primeiro passo, mas sua evolução natural 
+    seria a transmissão sem fio dos dados para uma dashboard digital.
+\end{enumerate}
+
+
+\section{Conclusão}
+O estudo revisado oferece uma contribuição valiosa e prática no campo da interseção 
+entre física do solo e tecnologias 4.0. Ele demonstra, com rigor metodológico, 
+que é possível desenvolver sistemas de monitoramento de umidade do solo com 
+precisão agronômica aceitável utilizando componentes de baixo custo e hardware 
+aberto. A inovação da interface visual baseada em LEDs é particularmente 
+meritória, pois aborda a questão crítica da usabilidade e inclusão digital.
+
+Do ponto de vista da física do solo, o trabalho reforça a importância da 
+calibração \textit{in situ} para qualquer sensor que se proponha a medir 
+propriedades do solo de forma indireta. Também evidencia que, para a finalidade 
+específica de gestão de irrigação de uma cultura sensível como a couve, a medida 
+volumétrica direta (via sensor capacitivo calibrado) pode ser mais eficiente em 
+termos de WUP do que a medida do potencial matricial (via tensiômetro) 
+em um solo tropical.
+
+Em última análise, este trabalho representa um modelo de como a ciência da 
+física do solo pode ser traduzida em tecnologias 4.0 não apenas avançadas, 
+mas também acessíveis, inclusivas e orientadas para a solução de problemas 
+reais da agricultura sustentável, em sintonia com os desafios globais de 
+segurança hídrica e alimentar.
+
+
+\subsection{Edáficas}
+
+\begin{itemize}
+    %Baixa sensibilidade em solo seco/saturado – condições críticas para irrigação.
+    \item Solo único: Latossolo Vermelho Distrófico (sand 638, silt 66, clay 296 g kg$^{-1}$)
+    \item Calibração local obrigatória (textura, salinidade EC=0.15 dS m$^{-1}$)
+    \item Sem testes multi-solo
+\end{itemize}
+
+\subsection{Tecnológicas}
+
+\begin{enumerate}
+    \item Durabilidade não validada $>$ 1 ano para corrosão
+    \item Interface LEDs limitada (sem WiFi/IA)
+    \item Amostra sensores pequena (12 calibrados, 4 usados), sem ML para dados
+\end{enumerate}
+
+\subsection{Analíticas}
+O estudo não propos análise econômica (ROI, manutenção) e possivel comparação com soluções 
+comerciais, sendo assim limita à classificação como solução 4.0 completa.
+
+\section{Avaliação Metodológica}
+\textbf{Pontos fortes ($\star\star\star\star\star$):} Design fatorial 4x3, comparação ETc/IMT/IMC, DAQ customizado (Arduino mais SD), 2 safras.
+
+\textbf{Pontos fracos ($\star\star$):} Solo único (Latossolo Vermelho), amostra limitada (12 sensores), sem ML para dados.
+
+Sólido, mas poderia ser mais generalista.
+
+\section{Conclusão e Recomendações}
+\textbf{Veredito: 4.3/5 $\star\star\star\star$} Democratiza precisão para milhões de produtores.
+
+\textbf{Recomendações:}
+\begin{enumerate}
+  \item Multi-solo: Testar 5 texturas.
+  \item IoT avançado: ESP32 + app.
+  \item Automação: Válvulas + ML.
+  \item Economia: CBA (3 anos).
+\end{enumerate}
+
+\textbf{Frase final:} ``De sensores baratos a irrigação otimizada: revolução acessível.''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+O artigo organiza-se em quatro pilares principais:
+
+\begin{enumerate}
+    \item \textbf{Calibração Laboratorial}: Sensores calibrados via método gravimétrico (R$^2$ > 0.95, RMSE < 0.05)
+    \item \textbf{Curva de Retenção}: Modelo de van Genuchten ($\theta_s$ = 0.782 cm$^3$ cm$^{-3}$)
+    \item \textbf{Experimento de Campo}: Design fatorial 4$\times$3 (50-125\% ETc)
+    \item \textbf{Resultados}: WUP = 10.95 g L$^{-1}$ (sensores) vs 12.42 g L$^{-1}$ (ETc)
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Método} & \textbf{WUP (g L$^{-1}$)} & \textbf{R$^2$} & \textbf{RMSE} \\
+\hline
+ETc & 12.42 & - & - \\
+Sensores (IMC) & 10.95 & 0.95-0.97 & 0.017-0.019 \\
+Tensiômetros & 9.82 & - & - \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Análise das Forças}
+\subsection{Física do Solo}
+\begin{itemize}
+    \item \textbf{Calibração Rigorosa}: Método gravimétrico + van Genuchten para Latossolo Vermelho
+    \item \textbf{Equações Precisas}: $\theta_{actual} = \mu \cdot \rho_b$ e $\theta_{rep} = \theta_{fc} - \theta_{actual}$
+    \item \textbf{Realismo}: Amostras inalteradas (PVC 10 cm $\times$ 12 cm)
+\end{itemize}
+
+\subsection{Agricultura 4.0}
+\begin{itemize}
+    \item \textbf{IoT Acessível}: Arduino + LEDs RGB (custo < R\$ 100)
+    \item \textbf{Interface Intuitiva}: Verde (úmido) → Amarelo → Vermelho (seco)
+    \item \textbf{Open Source}: Código disponível em suplemento
+\end{itemize}
+
+\section{Críticas e Limitações}
+\subsection{1. Física do Solo - Heterogeneidade}
+\textbf{Problema}: Calibração em \textbf{um único solo} (64.5\% argila)
+
+\textbf{Evidências}:
+\begin{itemize}
+    \item Sensores capacitivos falham em solos salinos (EC > 1 dS m$^{-1}$)
+    \item Sem testes em Latossolos Arenoso/Álico (comuns no Brasil)
+    \item RMSE pode subir para 0.10+ em campo real
+\end{itemize}
+
+\subsection{2. Agricultura 4.0 - Escalabilidade}
+\begin{itemize}
+    \item \textbf{Sem conectividade}: LEDs limitam vs WiFi/LoRaWAN
+    \item \textbf{Durabilidade}: Sem testes > 1 ano (corrosão em PVC)
+    \item \textbf{Automação}: Falta integração com válvulas solenoidais
+\end{itemize}
+
+\subsection{3. Análise Econômica Incompleta}
+\begin{itemize}
+    \item Custo do sistema: R\$ 85 vs ROI não calculado
+    \item Economia de água: 12\% vs custo energia Arduino omitido
+\end{itemize}
+
+\section{Conclusão e Recomendações}
+
+\textbf{Vantagens}: Democratiza agricultura de precisão para pequenos produtores.
+
+\textbf{Limitações}: Robustez limitada a solos específicos.
+
+\textbf{Recomendações}:
+\begin{enumerate}
+    \item \textbf{Multi-solo}: Testar em 3-5 classes texturais
+    \item \textbf{IoT Avançado}: ESP32 + MQTT + app Android
+    \item \textbf{Automação}: Válvulas + previsão via ML
+    \item \textbf{Economia}: Análise CBA (custo-benefício)
+\end{enumerate}
+
+\textbf{Veredito Final:} $\star\star\star\star$ (4/5) \\
+\textbf{Excelente protótipo, mas precisa de validação ampliada.}
+
+\begin{thebibliography}{9}
+\bibitem{pitoro2025}
+Pitoro, V.S.J. et al. (2025). Application of low-cost soil moisture sensors for irrigation management in Brassica oleracea var. acephala cultivation. 
+{\em Smart Agricultural Technology}, {\bf 12}, 101596.
+
+\bibitem{ahmed2018}
+Ahmed, N. et al. (2018). IoT for Smart Precision Agriculture. 
+{\em IEEE Internet of Things Journal}.
+
+\bibitem{dobriyal2012}
+Dobriyal, P. et al. (2012). Review of soil moisture estimation methods. 
+{\em Journal of Hydrology}.
+\end{thebibliography}
+
+\end{document}
